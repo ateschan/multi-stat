@@ -8,22 +8,12 @@ This is a small project used to log short term performance and check for bottlen
 
 ## About
 
-Built with rust, the server file 
-
-## Features
-
-List the main features and functionalities of your project.
-
-- Feature 1: Description
-- Feature 2: Description
-- ...
+Built with rust and macroquad.
 
 ## Installation
 
-Provide step-by-step instructions on how to install and set up your project.
-
-```bash
-# Example installation commands
-git clone https://github.com/yourusername/yourproject.git
-cd yourproject
-npm install
+git clone https://github.com/happyface2000/multi-stat.git
+cd multi-stat-server
+cargo run
+cd multi-stat-client
+cargo run
