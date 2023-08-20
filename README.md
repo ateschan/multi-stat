@@ -4,20 +4,11 @@
 
 # Project Name
 
-Short description of your project.
-
-## Table of Contents
-
-- [About](#about)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+This is a small project used to log short term performance and check for bottlenecks when using high-performance applications.
 
 ## About
 
-Briefly describe your project, its purpose, and its key features.
+Built with rust, the server file 
 
 ## Features
 
