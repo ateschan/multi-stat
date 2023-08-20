@@ -64,18 +64,18 @@ async fn main(){
             
             for i in query_vec.iter() {
                 let new_posGPU = (screen_width()/21.0 * queries, screen_height()/3.0 - i[0]);
-                draw_line(previous_posGPU.0, previous_posGPU.1, new_posGPU.0, new_posGPU.1, 1.0, GREEN);
-                draw_line(screen_width()/21.0 * queries, screen_height()/3.0, new_posGPU.0, new_posGPU.1, 1.0, GREEN);
+                draw_line(previous_posGPU.0, previous_posGPU.1, new_posGPU.0, new_posGPU.1, 3.0, GREEN);
+                draw_line(screen_width()/21.0 * queries, screen_height()/3.0, new_posGPU.0, new_posGPU.1, 3.0, GREEN);
                 previous_posGPU = new_posGPU;
         
                 let new_posRAM = (screen_width()/21.0 * queries, screen_height()/4.8 * 3.0 - i[1] * 0.5);
-                draw_line(previous_posRAM.0, previous_posRAM.1, new_posRAM.0, new_posRAM.1, 1.0, RED);
-                draw_line(screen_width()/21.0 * queries, screen_height()/4.8 * 3.0 , new_posRAM.0, new_posRAM.1, 1.0, RED);
+                draw_line(previous_posRAM.0, previous_posRAM.1, new_posRAM.0, new_posRAM.1,  3.0, RED);
+                draw_line(screen_width()/21.0 * queries, screen_height()/4.8 * 3.0 , new_posRAM.0, new_posRAM.1,  3.0, RED);
                 previous_posRAM = new_posRAM;
         
                 let new_posCPU = (screen_width()/21.0 * queries, screen_height() - i[2] * 0.5);
-                draw_line(previous_posCPU.0, previous_posCPU.1, new_posCPU.0, new_posCPU.1, 1.0, BLUE);
-                draw_line(screen_width()/21.0 * queries, screen_height(), new_posCPU.0, new_posCPU.1, 1.0, BLUE);
+                draw_line(previous_posCPU.0, previous_posCPU.1, new_posCPU.0, new_posCPU.1,  3.0, BLUE);
+                draw_line(screen_width()/21.0 * queries, screen_height(), new_posCPU.0, new_posCPU.1,  3.0, BLUE);
                 previous_posCPU = new_posCPU;
         
                 if queries != 22.0 {
