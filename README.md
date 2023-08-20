@@ -5,7 +5,7 @@
 # MULTI-STAT
 
 This is a small project used to log short term performance and check for bottlenecks when using high-performance applications.<br />
-Built to be used with a small rasberry pi device with lcd display / second monitor.
+Client is used with a small rasberry pi device with lcd display / second monitor.
 
 ##
 
