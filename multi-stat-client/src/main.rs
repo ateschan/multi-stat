@@ -7,8 +7,8 @@ use std::sync::{Arc, Mutex};
 #[macroquad::main("Graphically Represented Performance")]
 
 async fn main(){
-    //set_fullscreen(true);
-    //show_mouse(false);
+    set_fullscreen(true);
+    show_mouse(false);
     let mut stream = TcpStream::connect("192.168.2.3:7878")
     .expect("Failed to connect");
     
@@ -20,19 +20,21 @@ async fn main(){
     loop {
         clear_background(GRAY);
 
-        //draw_line(0.0 - 4.0, screen_height() / 3.0, screen_width() + 4.0, screen_height()/ 3.0, 12.0, DARKGRAY);
-        //draw_line(0.0 - 4.0, screen_height() / 3.0 * 2.0, screen_width() + 4.0, screen_height()/ 3.0 * 2.0, 12.0, DARKGRAY);
+        draw_text("GPU", 20.0, screen_height()/6.0, 30.0, DARKGRAY);
+        draw_text("RAM", 20.0, screen_height()/2.0, 30.0, DARKGRAY);
+        draw_text("CPU", 20.0, screen_height()/6.0 * 5.0, 30.0, DARKGRAY);
 
         let (grid_size, step) = (21, screen_width() / 21.0);
-        
+        let mut ct: i32 = 0;
         for i in 0..=grid_size {
             let pos = i as f32 * step;
 
-            if grid_size == 7 {
-                draw_line(pos, 0.0, pos, screen_height(), 8.0, DARKGRAY);
+            if ct == 5 || ct == 9 {
+                draw_line(0.0, pos, screen_width(), pos, 2.0, BLACK);
             }
             draw_line(pos, 0.0, pos, screen_height(), 1.0, DARKGRAY);
             draw_line(0.0, pos, screen_width(), pos, 1.0, DARKGRAY);
+            ct += 1;
         }
 
 
@@ -74,8 +76,8 @@ async fn main(){
                 previous_posRAM = new_posRAM;
         
                 let new_posCPU = (screen_width()/21.0 * queries, screen_height() - i[2] * 0.5);
-                draw_line(previous_posCPU.0, previous_posCPU.1, new_posCPU.0, new_posCPU.1,  3.0, BLUE);
-                draw_line(screen_width()/21.0 * queries, screen_height(), new_posCPU.0, new_posCPU.1,  3.0, BLUE);
+                draw_line(previous_posCPU.0, previous_posCPU.1, new_posCPU.0, new_posCPU.1,  3.0, DARKBLUE);
+                draw_line(screen_width()/21.0 * queries, screen_height(), new_posCPU.0, new_posCPU.1,  3.0, DARKBLUE);
                 previous_posCPU = new_posCPU;
         
                 if queries != 22.0 {
