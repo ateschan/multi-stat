@@ -6,7 +6,7 @@
 
 This is a small project used to log short term performance and check for bottlenecks when using high-performance applications.
 
-## About
+##
 
 Built with rust and macroquad.
 
