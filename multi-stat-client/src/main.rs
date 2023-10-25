@@ -9,7 +9,7 @@ use std::sync::{Arc, Mutex};
 async fn main(){
     set_fullscreen(true);
     show_mouse(false);
-    let mut stream = TcpStream::connect("192.168.2.3:7878")
+    let mut stream = TcpStream::connect("IP OF HOST MACHINE:OPENED PORT")
     .expect("Failed to connect");
     
     let mut query_vec = Vec::new();
