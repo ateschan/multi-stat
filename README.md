@@ -4,7 +4,7 @@
 
 # MULTI-STAT
 
-This is a small project used to log short term performance and check for bottlenecks when using high-performance applications.<br />
+Graphical System moniter made using rust.<br />
 Client is used with a small rasberry pi device with lcd display / second monitor.
 
 ##
