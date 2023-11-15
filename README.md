@@ -4,7 +4,7 @@
 
 # MULTI-STAT
 
-Graphical System moniter made using rust.<br />
+Graphical system monitor made using rust.<br />
 Client is used with a small rasberry pi device with lcd display / second monitor.
 
 ##
