@@ -4,6 +4,8 @@
 
 # MULTI-STAT
 
+https://addisonteschan.com/src/assets/video/statapp.mp4
+
 Graphical system monitor made for local networks<br />
 Client is used with a small rasberry pi device with lcd display / second monitor.
 
